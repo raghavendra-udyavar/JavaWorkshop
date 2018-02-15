@@ -1,4 +1,4 @@
-package controller.deserializer;
+package controllers.deserializers;
 
 import data.PriceUpdate;
 

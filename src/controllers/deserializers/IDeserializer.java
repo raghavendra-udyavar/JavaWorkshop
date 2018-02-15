@@ -1,4 +1,4 @@
-package controller.deserializer;
+package controllers.deserializers;
 
 interface IDeserializer<T> {
     T Deserialize (String input);
