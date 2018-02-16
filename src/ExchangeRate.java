@@ -9,7 +9,11 @@ class ExchangeRate {
                 + "2017-11-01T09:42:23+00:00 BITCXINDIA ALT INR 1003.0 0.0005\n"
                 + "2017-11-01T09:42:23+00:00 COINCHECK BTC USD 1004.0 0.0005";
 
-        PriceUpdateDeserializer priceUpdateDeserializer = new PriceUpdateDeserializer();
-        priceUpdateDeserializer.Deserialize(newPriceUpdateString);
+        try {
+            PriceUpdateDeserializer priceUpdateDeserializer = new PriceUpdateDeserializer();
+            priceUpdateDeserializer.deserialize(newPriceUpdateString);
+        }catch (Exception ex){
+
+        }
     }
 }
