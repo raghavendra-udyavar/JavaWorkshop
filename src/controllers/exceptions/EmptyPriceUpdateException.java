@@ -5,3 +5,4 @@ public class EmptyPriceUpdateException extends  Exception {
         super(message);
     }
 }
+
