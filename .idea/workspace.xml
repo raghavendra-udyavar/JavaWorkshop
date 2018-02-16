@@ -14,8 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="376fb61e-eb48-4dc1-a627-a394e82c278f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializer.java" afterPath="$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializer.java" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializerTest.java" afterPath="$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="ExchangeRate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExchangeRate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="51">
+              <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -40,8 +41,8 @@
       <file leaf-file-name="PriceUpdateDeserializer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="80" />
+            <state relative-caret-position="315">
+              <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,8 +53,8 @@
       <file leaf-file-name="PriceUpdateDeserializerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+            <state relative-caret-position="315">
+              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,8 +107,8 @@
         <option value="$PROJECT_DIR$/src/ExchangeRate.java" />
         <option value="$PROJECT_DIR$/src/controllers/exceptions/ExchangeRateException.java" />
         <option value="$PROJECT_DIR$/src/controllers/serializers/IDeserializer.java" />
-        <option value="$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializer.java" />
         <option value="$PROJECT_DIR$/unit-test/src/PriceUpdateTest.java" />
+        <option value="$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializer.java" />
         <option value="$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializerTest.java" />
       </list>
     </option>
@@ -241,7 +242,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in JavaWorkshop-Project (1)">
+  <component name="RunManager" selected="JUnit.PriceUpdateDeserializerTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -262,46 +263,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-    </configuration>
-    <configuration name="All in JavaWorkshop-Project (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="JavaWorkshop-Project" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="All in JavaWorkshop-Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="JavaWorkshop-Project" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="PriceUpdateDeserializerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -328,7 +289,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="PriceUpdateDeserializerTest.deserialize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PriceUpdateDeserializerTest.CheckIndividualPriceUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="controllers.serializers.*" />
@@ -340,7 +301,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="controllers.serializers" />
       <option name="MAIN_CLASS_NAME" value="controllers.serializers.PriceUpdateDeserializerTest" />
-      <option name="METHOD_NAME" value="deserialize" />
+      <option name="METHOD_NAME" value="CheckIndividualPriceUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -353,7 +314,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="PriceUpdateDeserializerTest.isPriceUpdateInputEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PriceUpdateDeserializerTest.CheckPriceUpdateCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="controllers.serializers.*" />
@@ -365,7 +326,57 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="controllers.serializers" />
       <option name="MAIN_CLASS_NAME" value="controllers.serializers.PriceUpdateDeserializerTest" />
-      <option name="METHOD_NAME" value="isPriceUpdateInputEmpty" />
+      <option name="METHOD_NAME" value="CheckPriceUpdateCount" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="PriceUpdateDeserializerTest.isPriceUpdateFormatCountOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="controllers.serializers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JavaWorkshop-Project" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="controllers.serializers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.serializers.PriceUpdateDeserializerTest" />
+      <option name="METHOD_NAME" value="isPriceUpdateFormatCountOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="PriceUpdateDeserializerTest.isPriceUpdateInputNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="controllers.serializers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JavaWorkshop-Project" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="controllers.serializers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.serializers.PriceUpdateDeserializerTest" />
+      <option name="METHOD_NAME" value="isPriceUpdateInputNull" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -440,18 +451,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.isPriceUpdateInputEmpty" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.deserialize" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.All in JavaWorkshop-Project" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.All in JavaWorkshop-Project (1)" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.isPriceUpdateInputNull" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.isPriceUpdateFormatCountOk" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.CheckPriceUpdateCount" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.CheckIndividualPriceUpdate" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in JavaWorkshop-Project (1)" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in JavaWorkshop-Project" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.deserialize" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.isPriceUpdateInputEmpty" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.CheckIndividualPriceUpdate" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.CheckPriceUpdateCount" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.isPriceUpdateFormatCountOk" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PriceUpdateDeserializerTest.isPriceUpdateInputNull" />
       </list>
     </recent_temporary>
   </component>
@@ -471,30 +482,31 @@
       <workItem from="1518310435329" duration="2163000" />
       <workItem from="1518318613307" duration="270000" />
       <workItem from="1518735484571" duration="13334000" />
+      <workItem from="1518756144459" duration="2926000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_JavaWorkshop-Project - 2018.02.16 at 12h 38m 40s.xml">
-      <configuration name="All in JavaWorkshop-Project" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_JavaWorkshop-Project_(1) - 2018.02.16 at 11h 57m 22s.xml">
-      <configuration name="All in JavaWorkshop-Project (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_JavaWorkshop-Project_(1) - 2018.02.16 at 12h 41m 39s.xml">
-      <configuration name="All in JavaWorkshop-Project (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_JavaWorkshop-Project_(2) - 2018.02.16 at 12h 01m 56s.xml">
-      <configuration name="All in JavaWorkshop-Project (2)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_JavaWorkshop-Project_(3) - 2018.02.16 at 12h 12m 50s.xml">
-      <configuration name="All in JavaWorkshop-Project (3)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PriceUpdateDeserializerTest - 2018.02.16 at 12h 35m 07s.xml">
+    <history-entry file="PriceUpdateDeserializerTest - 2018.02.16 at 12h 45m 40s.xml">
       <configuration name="PriceUpdateDeserializerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PriceUpdateDeserializerTest_deserialize - 2018.02.16 at 12h 38m 29s.xml">
-      <configuration name="PriceUpdateDeserializerTest.deserialize" configurationId="JUnit" />
+    <history-entry file="PriceUpdateDeserializerTest - 2018.02.16 at 13h 30m 24s.xml">
+      <configuration name="PriceUpdateDeserializerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PriceUpdateDeserializerTest_CheckIndividualPriceUpdate - 2018.02.16 at 13h 30m 56s.xml">
+      <configuration name="PriceUpdateDeserializerTest.CheckIndividualPriceUpdate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PriceUpdateDeserializerTest_CheckPriceUpdateCount - 2018.02.16 at 13h 23m 38s.xml">
+      <configuration name="PriceUpdateDeserializerTest.CheckPriceUpdateCount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PriceUpdateDeserializerTest_isPriceUpdateFormatCountOk - 2018.02.16 at 13h 20m 05s.xml">
+      <configuration name="PriceUpdateDeserializerTest.isPriceUpdateFormatCountOk" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PriceUpdateDeserializerTest_isPriceUpdateFormatCountOk - 2018.02.16 at 13h 20m 28s.xml">
+      <configuration name="PriceUpdateDeserializerTest.isPriceUpdateFormatCountOk" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PriceUpdateDeserializerTest_isPriceUpdateFormatCountOk - 2018.02.16 at 13h 21m 07s.xml">
+      <configuration name="PriceUpdateDeserializerTest.isPriceUpdateFormatCountOk" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PriceUpdateDeserializerTest_isPriceUpdateInputEmpty - 2018.02.16 at 12h 37m 25s.xml">
       <configuration name="PriceUpdateDeserializerTest.isPriceUpdateInputEmpty" configurationId="JUnit" />
@@ -507,7 +519,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22387000" />
+    <option name="totallyTimeSpent" value="25313000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -520,6 +532,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -530,13 +543,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2771739" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -548,6 +560,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,19 +580,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/src/runnable/PriceUpdateRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -587,26 +592,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/src/ExchangeRate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -615,22 +605,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/src/ExchangeRate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -643,43 +619,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/Applets/AppletExtension.java" />
-    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/src/ExchangeRate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -688,30 +635,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/src/ExchangeRate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -720,30 +646,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/src/ExchangeRate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -752,30 +657,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -787,7 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,30 +683,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/src/ExchangeRate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -832,14 +694,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/IDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -847,62 +702,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/deserializers/IDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/deserializers/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/data/PriceUpdate.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/deserializer/PriceUpdateDeserializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/deserializers/IDeserializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/deserializers/PriceUpdateDeserializer.java" />
     <entry file="file://$PROJECT_DIR$/src/runnable/PriceUpdateRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/exceptions/ExchangeRateException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/exceptions/ExchangeRateException.java" />
     <entry file="file://$PROJECT_DIR$/src/controllers/serializers/IDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -911,29 +723,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit-test/src/PriceUpdateTest.java">
+    <entry file="file://$PROJECT_DIR$/unit-test/src/PriceUpdateTest.java" />
+    <entry file="file://$PROJECT_DIR$/junit/junit.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExchangeRate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -945,18 +739,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/junit/JUnit.iml">
+    <entry file="file://$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="315">
+          <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExchangeRate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/serializers/PriceUpdateDeserializerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="315">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
