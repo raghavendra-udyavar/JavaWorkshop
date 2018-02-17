@@ -2,8 +2,9 @@ package controllers.serializers;
 
 import controllers.exceptions.EmptyPriceUpdateException;
 import controllers.data.PriceUpdate;
-import controllers.exceptions.PriceUpdateNumberFormatException;
+import controllers.exceptions.PriceUpdateFormatException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // Deserialize PriceUpdate input
@@ -16,40 +17,42 @@ public class PriceUpdateDeserializer implements IDeserializer {
     public List<PriceUpdate> deserialize(String input) throws Exception{
 
         System.out.println("Deserialization");
+        List<PriceUpdate> deserializedPriceUpdates = new ArrayList<PriceUpdate>();
 
         // check if the priceupdate is empty
         if(!isInputNullOrEmpty(input)){
             String[] priceUpdates = getPriceUpdates(input);
             for (String priceUpdate : priceUpdates) {
                 String[] priceUpdateValues = getIndividualPriceUpdate(priceUpdate);
-                constructPriceUpdate(priceUpdateValues);
+                PriceUpdate deserializedPriceUpdate = constructPriceUpdate(priceUpdateValues);
+                deserializedPriceUpdates.add(deserializedPriceUpdate);
             }
         }
 
         return  null;
     }
 
-    PriceUpdate constructPriceUpdate(String[] priceUpdateString) throws PriceUpdateNumberFormatException{
+    PriceUpdate constructPriceUpdate(String[] priceUpdateString) throws PriceUpdateFormatException {
         String exchange = priceUpdateString[1];
         String sourceCurrency = priceUpdateString[2];
         String destinationCurrency = priceUpdateString[3];
 
         double forwardRate = 0.0f;
+
         try {
             forwardRate = Double.parseDouble(priceUpdateString[4]);
         } catch (Exception ex){
-            throw new PriceUpdateNumberFormatException("Incorrect forwardRate format");
+            throw new PriceUpdateFormatException("Incorrect forwardRate format");
         }
 
         double backwardRate = 0.0f;
         try {
             backwardRate = Double.parseDouble(priceUpdateString[5]);
         } catch (Exception ex){
-            throw new PriceUpdateNumberFormatException("Incorrect backwardRate format");
+            throw new PriceUpdateFormatException("Incorrect backwardRate format");
         }
 
         return new PriceUpdate(exchange, sourceCurrency, destinationCurrency, forwardRate, backwardRate);
-
     }
 
     boolean isInputNullOrEmpty(String input) throws EmptyPriceUpdateException {
@@ -60,17 +63,6 @@ public class PriceUpdateDeserializer implements IDeserializer {
         } else {
             return false;
         }
-    }
-
-    boolean isInputInRightFormat(String input) throws EmptyPriceUpdateException {
-        if(!isInputNullOrEmpty(input)){
-            String[] priceUpdates = getPriceUpdates(input);
-            for (String priceUpdate : priceUpdates) {
-                String[] priceUpdateValues = getIndividualPriceUpdate(priceUpdate);
-
-            }
-        }
-        return false;
     }
 
     String[] getPriceUpdates(String input){
