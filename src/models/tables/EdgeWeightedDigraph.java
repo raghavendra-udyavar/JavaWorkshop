@@ -36,7 +36,7 @@ public class EdgeWeightedDigraph {
         return constructAdjacencyMatrix();
     }
 
-    double[][] constructAdjacencyMatrix()
+    private double[][] constructAdjacencyMatrix()
     {
         int verticesCount = vertexTable.exchangeCurrencyVertexTreeMap.size();
         double[][] adjacencyMatrix = new double[verticesCount][];
@@ -59,7 +59,7 @@ public class EdgeWeightedDigraph {
         return adjacencyMatrix;
     }
 
-    double getEdgeWeightFromiToj(int i, int j)
+    private double getEdgeWeightFromiToj(int i, int j)
     {
         WeightedEdge edge = edgeTable.get(i, j);
         if (edge != null)

@@ -11,11 +11,11 @@ class PriceUpdateDeserializerTest {
 
     PriceUpdateDeserializer priceUpdateDeserializer = new PriceUpdateDeserializer();
 
-    String newPriceUpdateString = "2017-11-01T09:42:23+00:00 KRAKEN BTC USD 1000.0 0.0009\n"
-            + "2017-11-01T09:42:23+00:00 ETH SGD 1001.0 0.0008\n"
-            + "2017-11-01T09:42:23+00:00 GEMINI BTC USD 1002.0 0.0005\n"
-            + "2017-11-01T09:42:23+00:00 BITCXINDIA ALT INR 1003.0 0.0005\n"
-            + "2017-11-01T09:42:23+00:00 COINCHECK BTC USD 1004.0 0.0005";
+    String newPriceUpdateString = "2017-11-01T09:42:23+00:00 DBS SGD USD 1.00 0.76\n"
+            + "2017-11-01T09:42:23+00:00 OCBC SGD RM 1.00 2.97\n"
+            + "2017-11-01T09:42:23+00:00 CITI USD INR 1 64.39\n"
+            + "2017-11-01T09:42:23+00:00 SBI INR SGD 1.00 0.020\n"
+            + "2017-11-01T09:42:23+00:00 SBI INR USD 1.00 0.016";
 
     @Test
     void deserialize(){
@@ -30,12 +30,12 @@ class PriceUpdateDeserializerTest {
 
     @Test
     void isPriceUpdateInputNull() {
-        assertThrows(EmptyPriceUpdateException.class, () -> { priceUpdateDeserializer.isInputNullOrEmpty(null); }, "price update is null");
+        assertThrows(EmptyPriceUpdateException.class, () -> priceUpdateDeserializer.isInputNullOrEmpty(null), "price update is null");
     }
 
     @Test
     void isPriceUpdateInputEmpty(){
-        assertThrows(EmptyPriceUpdateException.class, () -> { priceUpdateDeserializer.isInputNullOrEmpty(""); }, "price update is null");
+        assertThrows(EmptyPriceUpdateException.class, () -> priceUpdateDeserializer.isInputNullOrEmpty(""), "price update is null");
     }
 
     @Test
@@ -56,7 +56,7 @@ class PriceUpdateDeserializerTest {
     void checkPriceUpdateFormat(){
 
         assertThrows(PriceUpdateFormatException.class, ()-> {
-            String input = "2017-11-01T09:42:23+00:00 KRAKEN BTC USD some some\n";
+            String input = "2017-11-01T09:42:23+00:00 DBS SGD USD some some\n";
 
             String[] priceUpdates = priceUpdateDeserializer.getPriceUpdates(input);
             for (String priceUpdate : priceUpdates) {

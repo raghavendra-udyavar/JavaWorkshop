@@ -9,7 +9,7 @@ import controllers.exceptions.PriceUpdateFormatException;
 // <TimeStamp> <Exchange> <Source currency> <Destination Currency> <Forward rate> <Backward rate>
 public class PriceUpdateDeserializer<T> implements IDeserializer {
 
-    static final int PRICEUPDATECOUNT = 6;
+    private static final int PRICEUPDATECOUNT = 6;
 
     @Override
     public T[] deserialize(String input) throws Exception{
@@ -23,6 +23,11 @@ public class PriceUpdateDeserializer<T> implements IDeserializer {
             int i = 0;
             for (String priceUpdate : priceUpdates) {
                 String[] priceUpdateValues = getIndividualPriceUpdate(priceUpdate);
+
+                if(priceUpdateValues.length != PRICEUPDATECOUNT){
+                    throw new PriceUpdateFormatException("Price update value is incomplete");
+                }
+
                 PriceUpdate deserializedPriceUpdate = constructPriceUpdate(priceUpdateValues);
                 deserializedPriceUpdates[i] = deserializedPriceUpdate;
                 i++;
@@ -37,7 +42,7 @@ public class PriceUpdateDeserializer<T> implements IDeserializer {
         String sourceCurrency = priceUpdateString[2];
         String destinationCurrency = priceUpdateString[3];
 
-        double forwardRate = 0.0f;
+        double forwardRate;
 
         try {
             forwardRate = Double.parseDouble(priceUpdateString[4]);
@@ -45,7 +50,7 @@ public class PriceUpdateDeserializer<T> implements IDeserializer {
             throw new PriceUpdateFormatException("Incorrect forwardRate format");
         }
 
-        double backwardRate = 0.0f;
+        double backwardRate;
         try {
             backwardRate = Double.parseDouble(priceUpdateString[5]);
         } catch (Exception ex){

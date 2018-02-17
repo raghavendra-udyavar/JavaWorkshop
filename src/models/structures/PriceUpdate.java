@@ -17,6 +17,4 @@ public class PriceUpdate {
         forwardRate = currForwardRate;
         backwardRate = currBackwardRate;
     }
-
-
 }

@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class VertexTable {
 
-    public TreeMap<Integer, ExchangeCurrencyVertex> exchangeCurrencyVertexTreeMap;
+    TreeMap<Integer, ExchangeCurrencyVertex> exchangeCurrencyVertexTreeMap;
 
     public VertexTable()
     {
@@ -29,7 +29,7 @@ public class VertexTable {
         }
     }
 
-    ExchangeCurrencyVertex get(String exchange, String currency)
+    private ExchangeCurrencyVertex get(String exchange, String currency)
     {
         for(ExchangeCurrencyVertex vertex : exchangeCurrencyVertexTreeMap.values()) {
             if((vertex.exchange == exchange) && (vertex.currency == currency))

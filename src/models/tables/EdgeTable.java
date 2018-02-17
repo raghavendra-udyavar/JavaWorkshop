@@ -24,7 +24,7 @@ public class EdgeTable {
         }
     }
 
-    WeightedEdge get(WeightedEdge edge){
+    private WeightedEdge get(WeightedEdge edge){
         return get(edge.sourceIndex, edge.destinationIndex);
     }
 
