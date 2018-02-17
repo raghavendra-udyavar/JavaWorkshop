@@ -18,10 +18,14 @@ public class PriceUpdateDeserializer implements IDeserializer {
         System.out.println("Deserialization");
 
         // check if the priceupdate is empty
-        if(isInputInRightFormat(input)) {
-            // check if the format is right
-
+        if(!isInputNullOrEmpty(input)){
+            String[] priceUpdates = getPriceUpdates(input);
+            for (String priceUpdate : priceUpdates) {
+                String[] priceUpdateValues = getIndividualPriceUpdate(priceUpdate);
+                constructPriceUpdate(priceUpdateValues);
+            }
         }
+
         return  null;
     }
 

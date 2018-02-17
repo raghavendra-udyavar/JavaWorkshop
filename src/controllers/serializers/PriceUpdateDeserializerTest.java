@@ -1,6 +1,7 @@
 package controllers.serializers;
 
 import controllers.exceptions.EmptyPriceUpdateException;
+import controllers.exceptions.PriceUpdateNumberFormatException;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Executable;
@@ -23,35 +24,37 @@ class PriceUpdateDeserializerTest {
 
     @Test
     void isPriceUpdateInputNull() {
-
-        try {
-            priceUpdateDeserializer.isInputNullOrEmpty(null);
-        } catch (Exception ex) {
-            assertThrows(EmptyPriceUpdateException.class, () -> { throw new EmptyPriceUpdateException("PriceUpdateInput cannot be null"); }, "price update is null");
-        }
+        assertThrows(EmptyPriceUpdateException.class, () -> { priceUpdateDeserializer.isInputNullOrEmpty(null); }, "price update is null");
     }
 
     @Test
     void isPriceUpdateInputEmpty(){
-
-        try {
-            priceUpdateDeserializer.isInputNullOrEmpty("");
-        } catch (Exception ex) {
-            assertThrows(EmptyPriceUpdateException.class, () -> { throw new EmptyPriceUpdateException("PriceUpdateInput cannot be empty"); }, "price update is null");
-        }
+        assertThrows(EmptyPriceUpdateException.class, () -> { priceUpdateDeserializer.isInputNullOrEmpty(""); }, "price update is null");
     }
 
     @Test
-    void CheckPriceUpdateCount(){
+    void checkPriceUpdateCount(){
 
         String[] totalPriceUpdates = priceUpdateDeserializer.getPriceUpdates(newPriceUpdateString);
         assertEquals(5, totalPriceUpdates.length);
     }
 
     @Test
-    void CheckIndividualPriceUpdate() {
+    void checkIndividualPriceUpdate() {
         String[] totalPriceUpdates = priceUpdateDeserializer.getPriceUpdates(newPriceUpdateString);
         String[] firstPriceUpdateValues = priceUpdateDeserializer.getIndividualPriceUpdate(totalPriceUpdates[0]);
         assertEquals(6, firstPriceUpdateValues.length);
+    }
+
+    @Test
+    void checkPriceUpdateFormat(){
+
+        assertThrows(PriceUpdateNumberFormatException.class, ()-> {
+            String input = "2017-11-01T09:42:23+00:00 KRAKEN BTC USD some 0.0009\n";
+
+            String[] priceUpdates = priceUpdateDeserializer.getPriceUpdates(input);
+            for (String priceUpdate : priceUpdates) {
+                String[] priceUpdateValues = priceUpdateDeserializer.getIndividualPriceUpdate(priceUpdate);
+                priceUpdateDeserializer.constructPriceUpdate(priceUpdateValues);} }, "format not right");
     }
 }
