@@ -1,12 +1,9 @@
 package controllers.serializers;
 
-import controllers.data.PriceUpdate;
+import models.structures.PriceUpdate;
 import controllers.exceptions.EmptyPriceUpdateException;
 import controllers.exceptions.PriceUpdateFormatException;
 import org.junit.jupiter.api.Test;
-
-import java.lang.reflect.Executable;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 

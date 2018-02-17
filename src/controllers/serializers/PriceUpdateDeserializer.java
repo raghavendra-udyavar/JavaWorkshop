@@ -1,11 +1,8 @@
 package controllers.serializers;
 
 import controllers.exceptions.EmptyPriceUpdateException;
-import controllers.data.PriceUpdate;
+import models.structures.PriceUpdate;
 import controllers.exceptions.PriceUpdateFormatException;
-
-import java.util.ArrayList;
-import java.util.List;
 
 // Deserialize PriceUpdate input
 // PriceUpdate typically is in the form mentioned below with multiple lines separated by newline character
@@ -14,10 +11,10 @@ public class PriceUpdateDeserializer<T> implements IDeserializer {
 
     static final int PRICEUPDATECOUNT = 6;
 
+    @Override
     public T[] deserialize(String input) throws Exception{
 
         System.out.println("Deserialization");
-
 
         // check if the priceupdate is empty
         if(!isInputNullOrEmpty(input)){

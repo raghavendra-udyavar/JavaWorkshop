@@ -1,9 +1,6 @@
-import controllers.data.PriceUpdate;
-import controllers.serializers.PriceUpdateDeserializer;
 import handlers.IRequestHandler;
 import handlers.PriceUpdateHandler;
-
-import java.util.List;
+import models.tables.EdgeWeightedDigraph;
 
 class ExchangeRate {
     public static void main(String[] args) {
@@ -15,7 +12,8 @@ class ExchangeRate {
                 + "2017-11-01T09:42:23+00:00 COINCHECK BTC USD 1004.0 0.0005";
 
         try {
-            IRequestHandler handler = new PriceUpdateHandler();
+            EdgeWeightedDigraph edgeWeightedDigraph = new EdgeWeightedDigraph();
+            IRequestHandler handler = new PriceUpdateHandler(edgeWeightedDigraph);
             handler.HandleRequest(newPriceUpdateString);
         }catch (Exception ex) {
 
