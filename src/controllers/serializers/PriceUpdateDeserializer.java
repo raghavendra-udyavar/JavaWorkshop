@@ -10,22 +10,25 @@ import java.util.List;
 // Deserialize PriceUpdate input
 // PriceUpdate typically is in the form mentioned below with multiple lines separated by newline character
 // <TimeStamp> <Exchange> <Source currency> <Destination Currency> <Forward rate> <Backward rate>
-public class PriceUpdateDeserializer implements IDeserializer {
+public class PriceUpdateDeserializer<T> implements IDeserializer {
 
     static final int PRICEUPDATECOUNT = 6;
 
-    public List<PriceUpdate> deserialize(String input) throws Exception{
+    public T[] deserialize(String input) throws Exception{
 
         System.out.println("Deserialization");
-        List<PriceUpdate> deserializedPriceUpdates = new ArrayList<PriceUpdate>();
+
 
         // check if the priceupdate is empty
         if(!isInputNullOrEmpty(input)){
             String[] priceUpdates = getPriceUpdates(input);
+            PriceUpdate[] deserializedPriceUpdates = new PriceUpdate[priceUpdates.length];
+            int i = 0;
             for (String priceUpdate : priceUpdates) {
                 String[] priceUpdateValues = getIndividualPriceUpdate(priceUpdate);
                 PriceUpdate deserializedPriceUpdate = constructPriceUpdate(priceUpdateValues);
-                deserializedPriceUpdates.add(deserializedPriceUpdate);
+                deserializedPriceUpdates[i] = deserializedPriceUpdate;
+                i++;
             }
         }
 

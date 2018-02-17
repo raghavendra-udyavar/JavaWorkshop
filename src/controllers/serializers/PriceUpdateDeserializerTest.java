@@ -23,10 +23,9 @@ class PriceUpdateDeserializerTest {
     @Test
     void deserialize(){
 
-        List<PriceUpdate> priceUpdates = null;
         try {
-            priceUpdates = priceUpdateDeserializer.deserialize(newPriceUpdateString);
-            assertEquals(5, priceUpdates.size());
+            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserialize(newPriceUpdateString);
+            assertEquals(5, priceUpdates.length);
         } catch (Exception ex){
 
         }

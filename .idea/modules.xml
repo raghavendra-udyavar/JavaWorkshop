@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/junit/JUnit.iml" filepath="$PROJECT_DIR$/junit/JUnit.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaWorkshop-Project.iml" filepath="$PROJECT_DIR$/JavaWorkshop-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/jUnit/jUnit.iml" filepath="$PROJECT_DIR$/jUnit/jUnit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/unit-test/unit-test.iml" filepath="$PROJECT_DIR$/unit-test/unit-test.iml" />
     </modules>
   </component>
 </project>

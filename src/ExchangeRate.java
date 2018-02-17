@@ -1,4 +1,9 @@
+import controllers.data.PriceUpdate;
 import controllers.serializers.PriceUpdateDeserializer;
+import handlers.IRequestHandler;
+import handlers.PriceUpdateHandler;
+
+import java.util.List;
 
 class ExchangeRate {
     public static void main(String[] args) {
@@ -10,9 +15,9 @@ class ExchangeRate {
                 + "2017-11-01T09:42:23+00:00 COINCHECK BTC USD 1004.0 0.0005";
 
         try {
-            PriceUpdateDeserializer priceUpdateDeserializer = new PriceUpdateDeserializer();
-            priceUpdateDeserializer.deserialize(newPriceUpdateString);
-        }catch (Exception ex){
+            IRequestHandler handler = new PriceUpdateHandler();
+            handler.HandleRequest(newPriceUpdateString);
+        }catch (Exception ex) {
 
         }
     }
