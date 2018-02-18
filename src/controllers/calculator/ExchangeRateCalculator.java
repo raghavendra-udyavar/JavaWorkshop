@@ -10,7 +10,7 @@ public class ExchangeRateCalculator {
 
     int[][] pathsTaken;
     EdgeWeightedDigraph edgeWeightedDigraph;
-    public double[][] BestExchangeRates;
+    double[][] bestExchangeRates;
 
     public  ExchangeRateCalculator(EdgeWeightedDigraph edgeWeightedDigraphObj){
         edgeWeightedDigraph = edgeWeightedDigraphObj;
@@ -21,12 +21,16 @@ public class ExchangeRateCalculator {
         runFloydWarshallAlgorithm(exchangeRateAdjacencyMatrix);
     }
 
+    public double GetBestExchangeRate(int sourceIndex, int destinationIndex){
+        return bestExchangeRates[sourceIndex][destinationIndex];
+    }
+
     private void runFloydWarshallAlgorithm(double[][] exchangeRateAdjacencyMatrix)
     {
         int vertexCount = edgeWeightedDigraph.GetVertexTable().GetVertices().size();
         pathsTaken = initializePathTaken(vertexCount);
 
-        BestExchangeRates = exchangeRateAdjacencyMatrix;
+        bestExchangeRates = exchangeRateAdjacencyMatrix;
 
         for (int k = 0; k < vertexCount; k++)
         {
@@ -34,9 +38,9 @@ public class ExchangeRateCalculator {
             {
                 for (int j = 0; j < vertexCount; j++)
                 {
-                    if (BestExchangeRates[i][j] < BestExchangeRates[i][k] * BestExchangeRates[k][j])
+                    if (bestExchangeRates[i][j] < bestExchangeRates[i][k] * bestExchangeRates[k][j])
                     {
-                        BestExchangeRates[i][j] = BestExchangeRates[i][k] * BestExchangeRates[k][j];
+                        bestExchangeRates[i][j] = bestExchangeRates[i][k] * bestExchangeRates[k][j];
                         pathsTaken[i][j] = pathsTaken[i][k];
                     }
                 }

@@ -10,11 +10,19 @@ public class ExchangeRateRequest {
         sourceExchangeCurrencyVertex = currSourceExchangeCurrencyVertex;
         destinationExchangeCurrencyVertex = currDestinationExchangeCurrencyVertex;
 
-        updateIndexForBothVertex(digraph);
-    }
+    updateIndexForBothVertex(digraph);
+}
 
     void updateIndexForBothVertex(EdgeWeightedDigraph digraph){
         sourceExchangeCurrencyVertex.index = digraph.GetVertexTable().get(sourceExchangeCurrencyVertex.exchange, sourceExchangeCurrencyVertex.currency).index;
         destinationExchangeCurrencyVertex.index = digraph.GetVertexTable().get(destinationExchangeCurrencyVertex.exchange, destinationExchangeCurrencyVertex.currency).index;
+    }
+
+    public int GetSourceExchangeCurrencyIndex(){
+        return sourceExchangeCurrencyVertex.index;
+    }
+
+    public int GetDestinationExchangeCurrencyIndex(){
+        return destinationExchangeCurrencyVertex.index;
     }
 }

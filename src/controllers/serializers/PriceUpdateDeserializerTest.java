@@ -48,7 +48,7 @@ class PriceUpdateDeserializerTest {
     void checkIndividualPriceUpdate() {
         String[] totalPriceUpdates = priceUpdateDeserializer.getPriceUpdates(newPriceUpdateString);
         String[] firstPriceUpdateValues = priceUpdateDeserializer.getIndividualPriceUpdate(totalPriceUpdates[0]);
-        assertEquals(6, firstPriceUpdateValues.length);
+        assertEquals(PriceUpdateDeserializer.PRICEUPDATECOUNT, firstPriceUpdateValues.length);
     }
 
     @Test

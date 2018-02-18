@@ -10,7 +10,7 @@ import controllers.exceptions.PriceUpdateFormatException;
 // <TimeStamp> <Exchange> <Source currency> <Destination Currency> <Forward rate> <Backward rate>
 public class PriceUpdateDeserializer<T> implements IDeserializer, IMultilineDeserializer {
 
-    private static final int PRICEUPDATECOUNT = 6;
+    static final int PRICEUPDATECOUNT = 6;
 
     @Override
     public T[] deserializeMultiline(String input) throws Exception{
@@ -85,8 +85,7 @@ public class PriceUpdateDeserializer<T> implements IDeserializer, IMultilineDese
     String[] getIndividualPriceUpdate(String input){
 
         // separate the priceupdate from the input string
-        String[] priceUpdateStrings = input.split(" ");
-        return priceUpdateStrings;
+        return input.split(" ");
     }
 
 
