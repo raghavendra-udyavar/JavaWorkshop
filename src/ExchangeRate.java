@@ -1,3 +1,4 @@
+import controllers.calculator.ExchangeRateCalculator;
 import handlers.IRequestHandler;
 import handlers.PriceUpdateHandler;
 import models.tables.EdgeWeightedDigraph;
@@ -13,10 +14,11 @@ class ExchangeRate {
 
         try {
             EdgeWeightedDigraph edgeWeightedDigraph = new EdgeWeightedDigraph();
-            IRequestHandler handler = new PriceUpdateHandler(edgeWeightedDigraph);
+            ExchangeRateCalculator exchangeRateCalculator = new ExchangeRateCalculator(edgeWeightedDigraph);
+
+            IRequestHandler handler = new PriceUpdateHandler(edgeWeightedDigraph, exchangeRateCalculator);
             handler.HandleRequest(newPriceUpdateString);
         }catch (Exception ex) {
-
         }
     }
 }

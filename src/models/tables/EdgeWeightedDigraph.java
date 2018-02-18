@@ -13,6 +13,9 @@ public class EdgeWeightedDigraph {
         vertexTable = new VertexTable();
     }
 
+    public EdgeTable GetEdgeTable(){ return edgeTable; }
+    public  VertexTable GetVertexTable() { return vertexTable; }
+
     public double[][] updateDigraph(PriceUpdate[] priceUpdates)
     {
         for (PriceUpdate priceUpdate : priceUpdates)
@@ -81,4 +84,6 @@ public class EdgeWeightedDigraph {
             }
         }
     }
+
+
 }

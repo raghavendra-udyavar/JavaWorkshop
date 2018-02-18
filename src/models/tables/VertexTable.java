@@ -13,6 +13,8 @@ public class VertexTable {
         exchangeCurrencyVertexTreeMap = new TreeMap<>();
     }
 
+    public TreeMap<Integer, ExchangeCurrencyVertex> GetVertices() { return exchangeCurrencyVertexTreeMap; }
+
     public ExchangeCurrencyVertex addOrUpdateVertices(String exchange, String currency)
     {
         ExchangeCurrencyVertex foundExchangeCurrencyVertex = get(exchange, currency);
