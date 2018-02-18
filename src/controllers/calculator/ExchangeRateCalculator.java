@@ -65,7 +65,6 @@ public class ExchangeRateCalculator {
             return null;
         } else
         {
-            int vertexCount = edgeWeightedDigraph.GetVertexTable().GetVertices().size();
             List<ExchangeCurrencyVertex> path = new LinkedList<>();
             while (sourceIndex != destIndex)
             {

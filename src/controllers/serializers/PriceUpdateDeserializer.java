@@ -1,20 +1,19 @@
 package controllers.serializers;
 
-import controllers.exceptions.EmptyPriceUpdateException;
+import controllers.exceptions.EmptyInputException;
+import controllers.exceptions.IncompleteInputException;
 import models.structures.PriceUpdate;
 import controllers.exceptions.PriceUpdateFormatException;
 
 // Deserialize PriceUpdate input
 // PriceUpdate typically is in the form mentioned below with multiple lines separated by newline character
 // <TimeStamp> <Exchange> <Source currency> <Destination Currency> <Forward rate> <Backward rate>
-public class PriceUpdateDeserializer<T> implements IDeserializer {
+public class PriceUpdateDeserializer<T> implements IDeserializer, IMultilineDeserializer {
 
     private static final int PRICEUPDATECOUNT = 6;
 
     @Override
-    public T[] deserialize(String input) throws Exception{
-
-        System.out.println("Deserialization");
+    public T[] deserializeMultiline(String input) throws Exception{
 
         // check if the priceupdate is empty
         if(!isInputNullOrEmpty(input)){
@@ -22,13 +21,7 @@ public class PriceUpdateDeserializer<T> implements IDeserializer {
             PriceUpdate[] deserializedPriceUpdates = new PriceUpdate[priceUpdates.length];
             int i = 0;
             for (String priceUpdate : priceUpdates) {
-                String[] priceUpdateValues = getIndividualPriceUpdate(priceUpdate);
-
-                if(priceUpdateValues.length != PRICEUPDATECOUNT){
-                    throw new PriceUpdateFormatException("Price update value is incomplete");
-                }
-
-                PriceUpdate deserializedPriceUpdate = constructPriceUpdate(priceUpdateValues);
+                PriceUpdate deserializedPriceUpdate = (PriceUpdate) deserialize(priceUpdate);
                 deserializedPriceUpdates[i] = deserializedPriceUpdate;
                 i++;
             }
@@ -37,6 +30,17 @@ public class PriceUpdateDeserializer<T> implements IDeserializer {
         }
 
         return  null;
+    }
+
+    @Override
+    public T deserialize(String input) throws Exception {
+        String[] priceUpdateValues = getIndividualPriceUpdate(input);
+
+        if(priceUpdateValues.length != PRICEUPDATECOUNT){
+            throw new IncompleteInputException("Price update value is incomplete");
+        }
+
+        return (T) constructPriceUpdate(priceUpdateValues);
     }
 
     PriceUpdate constructPriceUpdate(String[] priceUpdateString) throws PriceUpdateFormatException {
@@ -62,11 +66,11 @@ public class PriceUpdateDeserializer<T> implements IDeserializer {
         return new PriceUpdate(exchange, sourceCurrency, destinationCurrency, forwardRate, backwardRate);
     }
 
-    boolean isInputNullOrEmpty(String input) throws EmptyPriceUpdateException {
+    boolean isInputNullOrEmpty(String input) throws EmptyInputException {
         if(input == null){
-            throw new EmptyPriceUpdateException("PriceUpdateInput cannot be null");
+            throw new EmptyInputException("PriceUpdateInput cannot be null");
         } else if(input.isEmpty()){
-            throw new EmptyPriceUpdateException("PriceUpdateInput cannot be empty");
+            throw new EmptyInputException("PriceUpdateInput cannot be empty");
         } else {
             return false;
         }
@@ -84,4 +88,6 @@ public class PriceUpdateDeserializer<T> implements IDeserializer {
         String[] priceUpdateStrings = input.split(" ");
         return priceUpdateStrings;
     }
+
+
 }
