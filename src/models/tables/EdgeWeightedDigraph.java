@@ -42,7 +42,7 @@ public class EdgeWeightedDigraph {
     private double[][] constructAdjacencyMatrix()
     {
         int verticesCount = vertexTable.exchangeCurrencyVertexTreeMap.size();
-        double[][] adjacencyMatrix = new double[verticesCount][];
+        double[][] adjacencyMatrix = new double[verticesCount][verticesCount];
 
         for(int i = 0; i < verticesCount; i++)
         {

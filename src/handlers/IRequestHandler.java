@@ -1,5 +1,5 @@
 package handlers;
 
 public interface IRequestHandler {
-    void HandleRequest(String input);
+    void HandleRequest(String input) throws Exception;
 }

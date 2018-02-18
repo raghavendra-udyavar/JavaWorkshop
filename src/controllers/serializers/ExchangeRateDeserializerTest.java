@@ -15,7 +15,6 @@ class ExchangeRateDeserializerTest {
     EdgeWeightedDigraph edgeWeightedDigraph = new EdgeWeightedDigraph();
 
 
-
     @Test
     void deserialize() {
     }

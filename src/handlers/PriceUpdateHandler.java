@@ -16,15 +16,14 @@ public class PriceUpdateHandler implements IRequestHandler
     }
 
     @Override
-    public void HandleRequest(String input) {
-        try {
+    public void HandleRequest(String input) throws Exception {
+
             PriceUpdateDeserializer priceUpdateDeserializer = new PriceUpdateDeserializer();
-            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserialize(input);
+            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserializeMultiline(input);
+
+            // update the digraph and the bestexchangerate for the new priceupdates
             double[][] digraph = edgeWeightedDigraph.updateDigraph(priceUpdates);
             exchangeRateCalculator.calculateBestExchangeRate(digraph);
 
-        }catch (Exception ex){
-
-        }
     }
 }
