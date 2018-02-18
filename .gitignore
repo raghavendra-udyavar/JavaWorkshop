@@ -1,3 +1,4 @@
 *.iws
+*.class
 workspace.xml
 tasks.xml
