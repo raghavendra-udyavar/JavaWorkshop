@@ -31,11 +31,12 @@ public class VertexTable {
         }
     }
 
-    private ExchangeCurrencyVertex get(String exchange, String currency)
+    ExchangeCurrencyVertex get(String exchange, String currency)
     {
         for(ExchangeCurrencyVertex vertex : exchangeCurrencyVertexTreeMap.values()) {
-            if((vertex.exchange == exchange) && (vertex.currency == currency))
+            if(vertex.exchange.equals(exchange) && vertex.currency.equals(currency)) {
                 return vertex;
+            }
         }
 
         return null;

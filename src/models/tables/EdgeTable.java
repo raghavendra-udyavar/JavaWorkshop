@@ -12,7 +12,11 @@ public class EdgeTable {
         weightedEdges = new LinkedList<>();
     }
 
-    public void addOrUpdateEdges(WeightedEdge edge)
+    public List<WeightedEdge> getWeightedEdges() {
+        return weightedEdges;
+    }
+
+    public int addOrUpdateEdges(WeightedEdge edge)
     {
         WeightedEdge foundEdge = get(edge);
         if (foundEdge == null)
@@ -22,9 +26,11 @@ public class EdgeTable {
         {
             foundEdge.updateNewRate(edge.rate);
         }
+
+        return weightedEdges.size();
     }
 
-    private WeightedEdge get(WeightedEdge edge){
+    WeightedEdge get(WeightedEdge edge){
         return get(edge.sourceIndex, edge.destinationIndex);
     }
 

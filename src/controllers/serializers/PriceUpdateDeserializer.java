@@ -32,6 +32,8 @@ public class PriceUpdateDeserializer<T> implements IDeserializer {
                 deserializedPriceUpdates[i] = deserializedPriceUpdate;
                 i++;
             }
+
+            return (T[]) deserializedPriceUpdates;
         }
 
         return  null;
