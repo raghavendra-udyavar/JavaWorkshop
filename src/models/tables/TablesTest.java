@@ -20,7 +20,7 @@ class TablesTest {
             String newPriceUpdateString = "2017-11-01T09:42:23+00:00 DBS SGD USD 1.00 0.76\n"
                     + "2017-11-01T09:42:23+00:00 OCBC SGD RM 1.00 2.97";
 
-            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserialize(newPriceUpdateString);
+            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserializeMultiline(newPriceUpdateString);
             for (PriceUpdate priceUpdate : priceUpdates) {
 
                 // update the vertex table with the new price update
@@ -44,7 +44,7 @@ class TablesTest {
             String newPriceUpdateString = "2017-11-01T09:42:23+00:00 DBS SGD USD 1.00 0.76\n"
                     + "2017-11-01T09:42:23+00:00 DBS USD SGD 1 1.315";
 
-            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserialize(newPriceUpdateString);
+            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserializeMultiline(newPriceUpdateString);
 
             for (PriceUpdate priceUpdate : priceUpdates) {
 
@@ -69,7 +69,7 @@ class TablesTest {
             String newPriceUpdateString = "2017-11-01T09:42:23+00:00 DBS SGD USD 1.00 0.76\n"
                     + "2017-11-01T09:42:23+00:00 OCBC SGD RM 1.00 2.97";
 
-            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserialize(newPriceUpdateString);
+            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserializeMultiline(newPriceUpdateString);
             count = addOrUpdateEdge(priceUpdates);
         } catch (Exception e){
             e.printStackTrace();
@@ -90,7 +90,7 @@ class TablesTest {
             String newPriceUpdateString = "2017-11-01T09:42:23+00:00 DBS SGD USD 1.00 0.76\n"
                     + "2017-11-01T09:42:23+00:00 DBS USD SGD 1 1.315";
 
-            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserialize(newPriceUpdateString);
+            PriceUpdate[] priceUpdates = (PriceUpdate[]) priceUpdateDeserializer.deserializeMultiline(newPriceUpdateString);
             count = addOrUpdateEdge(priceUpdates);
         } catch (Exception e){
             e.printStackTrace();
