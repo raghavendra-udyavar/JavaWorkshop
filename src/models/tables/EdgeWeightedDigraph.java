@@ -74,7 +74,7 @@ public class EdgeWeightedDigraph {
             // the connection between them is 1 if they have a matching currency else -1
             ExchangeCurrencyVertex sourceVertex = vertexTable.exchangeCurrencyVertexTreeMap.get(i);
             ExchangeCurrencyVertex destinationVertex = vertexTable.exchangeCurrencyVertexTreeMap.get(j);
-            if (sourceVertex.currency == destinationVertex.currency)
+            if (sourceVertex.currency.equals(destinationVertex.currency))
             {
                 return 1.0;
             }

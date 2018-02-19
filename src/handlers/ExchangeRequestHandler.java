@@ -25,7 +25,11 @@ public class ExchangeRequestHandler implements  IRequestHandler {
 
         // get best exchangerate and the path taken for the best rate
         double bestRate = exchangeRateCalculator.GetBestExchangeRate(exchangeRateRequest.GetSourceExchangeCurrencyIndex(), exchangeRateRequest.GetDestinationExchangeCurrencyIndex());
-        List<ExchangeCurrencyVertex> bestPathTaken = exchangeRateCalculator.pathTaken(exchangeRateRequest.GetSourceExchangeCurrencyIndex(), exchangeRateRequest.GetDestinationExchangeCurrencyIndex());
+
+        // check the path taken for the best rate
+        if(bestRate > 0) {
+            List<ExchangeCurrencyVertex> bestPathTaken = exchangeRateCalculator.pathTaken(exchangeRateRequest.GetSourceExchangeCurrencyIndex(), exchangeRateRequest.GetDestinationExchangeCurrencyIndex());
+        }
 
         System.out.printf("done");
     }
