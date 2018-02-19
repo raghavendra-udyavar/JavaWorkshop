@@ -1,5 +1,5 @@
 # JAVA WORKSHOP
-A workshop using JAVA to get the best exchangerate from source currency to destination currency
+workshop using JAVA for brush up
 
 ### Requirements
  * This project is developed using Intellij IDE
