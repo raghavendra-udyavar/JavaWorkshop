@@ -16,13 +16,13 @@ class ExchangeRate {
             // object creators
             EdgeWeightedDigraph edgeWeightedDigraph = new EdgeWeightedDigraph();
             ExchangeRateCalculator exchangeRateCalculator = new ExchangeRateCalculator(edgeWeightedDigraph);
-            IRequestHandler handler = new PriceUpdateHandler(edgeWeightedDigraph, exchangeRateCalculator);
             DataConnection dataConnection = new DataConnection();
+            IRequestHandler handler = new PriceUpdateHandler(edgeWeightedDigraph, exchangeRateCalculator, dataConnection);
 
             handler.HandleRequest(priceUpdateInput);
 
             String exchangeRequestInput =  "EXCHANGE_RATE_REQUEST CITI USD SBI INR";
-            ExchangeRequestHandler exchangeRequestHandler = new ExchangeRequestHandler(edgeWeightedDigraph, exchangeRateCalculator, dataConnection);
+            ExchangeRequestHandler exchangeRequestHandler = new ExchangeRequestHandler(edgeWeightedDigraph, exchangeRateCalculator);
             exchangeRequestHandler.HandleRequest(exchangeRequestInput);
 
         }catch (Exception ex) {

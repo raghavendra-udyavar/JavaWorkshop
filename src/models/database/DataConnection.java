@@ -33,6 +33,14 @@ public class DataConnection {
             conn = DriverManager.getConnection(url, username, password);
             System.out.println("Connected to database");
 
+            PreparedStatement createStatement = conn.prepareStatement("CREATE TABLE IF NOT EXISTS priceupdate(id int NOT NULL, updatetime DATE , exchange char(10) NOT NULL ," +
+                    "sourcecurrency char(15) not NULL ," +
+                    "destinationcurrency char(15) not NULL," +
+                    "forwardrate real not NULL," +
+                    "backwardrate real not NULL ," +
+                    "PRIMARY KEY(id))");
+            createStatement.executeUpdate();
+
             System.out.println("Table added");
         }catch (Exception ex){
             System.out.println( ex);
