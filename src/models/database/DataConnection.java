@@ -20,7 +20,7 @@ public class DataConnection {
         String driver = "org.postgresql.Driver";
         String url = "jdbc:postgresql://localhost:5432/exchangeratecalculator";
         String username = "postgres";
-        String password = "harinilaya";
+        String password = "dbpassword";
 
         try {
             Class.forName(driver);
