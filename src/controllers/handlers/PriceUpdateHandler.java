@@ -1,4 +1,4 @@
-package handlers;
+package controllers.handlers;
 
 import controllers.calculator.ExchangeRateCalculator;
 import models.structures.PriceUpdate;

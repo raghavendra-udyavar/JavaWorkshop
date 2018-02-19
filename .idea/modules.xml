@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/junit/JUnit.iml" filepath="$PROJECT_DIR$/junit/JUnit.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaWorkshop-Project.iml" filepath="$PROJECT_DIR$/JavaWorkshop-Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jUnit/jUnit.iml" filepath="$PROJECT_DIR$/jUnit/jUnit.iml" />
     </modules>
   </component>
 </project>

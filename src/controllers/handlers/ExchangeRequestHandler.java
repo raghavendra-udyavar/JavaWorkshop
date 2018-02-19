@@ -1,7 +1,8 @@
-package handlers;
+package controllers.handlers;
 
 import controllers.calculator.ExchangeRateCalculator;
 import controllers.serializers.ExchangeRateRequestDeserializer;
+import models.database.DataConnection;
 import models.structures.ExchangeCurrencyVertex;
 import models.structures.ExchangeRateRequest;
 import models.tables.EdgeWeightedDigraph;
@@ -12,10 +13,12 @@ public class ExchangeRequestHandler implements  IRequestHandler {
 
     EdgeWeightedDigraph edgeWeightedDigraph;
     ExchangeRateCalculator exchangeRateCalculator;
+    DataConnection dataConnection;
 
-    public ExchangeRequestHandler(EdgeWeightedDigraph edgeWeightedDigraphObj, ExchangeRateCalculator exchangeRateCalculatorObj){
+    public ExchangeRequestHandler(EdgeWeightedDigraph edgeWeightedDigraphObj, ExchangeRateCalculator exchangeRateCalculatorObj, DataConnection connection){
         edgeWeightedDigraph = edgeWeightedDigraphObj;
         exchangeRateCalculator = exchangeRateCalculatorObj;
+        dataConnection = connection;
     }
 
     @Override

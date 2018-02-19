@@ -1,7 +1,8 @@
 import controllers.calculator.ExchangeRateCalculator;
-import handlers.ExchangeRequestHandler;
-import handlers.IRequestHandler;
-import handlers.PriceUpdateHandler;
+import controllers.handlers.ExchangeRequestHandler;
+import controllers.handlers.IRequestHandler;
+import controllers.handlers.PriceUpdateHandler;
+import models.database.DataConnection;
 import models.tables.EdgeWeightedDigraph;
 
 class ExchangeRate {
@@ -12,18 +13,22 @@ class ExchangeRate {
                 + "2017-11-01T09:42:23+00:00 SBI INR USD 1003.0 0.0005";
 
         try {
+            // object creators
             EdgeWeightedDigraph edgeWeightedDigraph = new EdgeWeightedDigraph();
             ExchangeRateCalculator exchangeRateCalculator = new ExchangeRateCalculator(edgeWeightedDigraph);
-
             IRequestHandler handler = new PriceUpdateHandler(edgeWeightedDigraph, exchangeRateCalculator);
+            DataConnection dataConnection = new DataConnection();
+
             handler.HandleRequest(priceUpdateInput);
 
             String exchangeRequestInput =  "EXCHANGE_RATE_REQUEST CITI USD SBI INR";
-            ExchangeRequestHandler exchangeRequestHandler = new ExchangeRequestHandler(edgeWeightedDigraph, exchangeRateCalculator);
+            ExchangeRequestHandler exchangeRequestHandler = new ExchangeRequestHandler(edgeWeightedDigraph, exchangeRateCalculator, dataConnection);
             exchangeRequestHandler.HandleRequest(exchangeRequestInput);
 
         }catch (Exception ex) {
             ex.printStackTrace();
         }
     }
+
+
 }
