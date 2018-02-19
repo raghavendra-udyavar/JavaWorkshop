@@ -33,7 +33,10 @@ public class ExchangeRateRequestDeserializer<T> implements  IDeserializer {
                 ExchangeCurrencyVertex sourceExchangeCurrency = new ExchangeCurrencyVertex(sourceExchange, sourceCurrency);
                 ExchangeCurrencyVertex destinationExchangeCurrency = new ExchangeCurrencyVertex(destinationExchange, destinationCurrency);
 
-                return (T)new ExchangeRateRequest(edgeWeightedDigraph, sourceExchangeCurrency, destinationExchangeCurrency);
+                ExchangeRateRequest exchangeRateRequest = new ExchangeRateRequest(sourceExchangeCurrency, destinationExchangeCurrency);
+                exchangeRateRequest.updateIndexForBothVertex(edgeWeightedDigraph);
+
+                return (T)exchangeRateRequest;
             } else {
                 throw new IncompleteInputException("exchange rate is missing some information");
             }
