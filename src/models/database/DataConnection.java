@@ -1,6 +1,7 @@
 package models.database;
 
 import models.structures.PriceUpdate;
+import org.postgresql.util.PSQLException;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -33,23 +34,30 @@ public class DataConnection {
             conn = DriverManager.getConnection(url, username, password);
             System.out.println("Connected to database");
 
-            PreparedStatement createStatement = conn.prepareStatement("CREATE TABLE IF NOT EXISTS priceupdate(id int NOT NULL, updatetime DATE , exchange char(10) NOT NULL ," +
+            PreparedStatement createStatement = conn.prepareStatement("CREATE SEQUENCE user_id_seq;" +
+                    " CREATE TABLE IF NOT EXISTS priceupdate(id int NOT NULL DEFAULT nextval('user_id_seq') , updatetime DATE , exchange char(10) NOT NULL ," +
                     "sourcecurrency char(15) not NULL ," +
                     "destinationcurrency char(15) not NULL," +
                     "forwardrate real not NULL," +
                     "backwardrate real not NULL ," +
-                    "PRIMARY KEY(id))");
+                    "PRIMARY KEY(id));" +
+                    "ALTER SEQUENCE user_id_seq OWNED BY priceupdate.id;");
             createStatement.executeUpdate();
 
             System.out.println("Table added");
         }catch (Exception ex){
-            System.out.println( ex);
+            System.out.println("priceupdate table already existing");
         }
         return conn;
     }
 
-    public void insertIntoTable(String sqlcommand) throws SQLException {
-        PreparedStatement createStatement = connection.prepareStatement(sqlcommand);
-        createStatement.executeUpdate();
+    public void insertIntoTable(String sqlcommand) {
+
+        try {
+            PreparedStatement createStatement = connection.prepareStatement(sqlcommand);
+            createStatement.executeUpdate();
+        } catch (SQLException ex) {
+            //ex.printStackTrace();
+        }
     }
 }
